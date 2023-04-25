@@ -1,21 +1,14 @@
-from deep_translator import GoogleTranslator
-  
 import os
 
 import psycopg2
-from chatgpt import Chatgpt
-from stablediffusion import StableDiffusion
-from dalle import DallE
-from dotenv import load_dotenv
-
 from aiocryptopay import AioCryptoPay, Networks
-
+from deep_translator import GoogleTranslator
+from dotenv import load_dotenv
 from telegram import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     ReplyKeyboardMarkup,
     Update,
-    Message,
     KeyboardButton,
 )
 from telegram.ext import (
@@ -26,7 +19,11 @@ from telegram.ext import (
     MessageHandler,
     filters,
     CallbackQueryHandler,
-    )
+)
+
+from chatgpt import Chatgpt
+from dalle import DallE
+from stablediffusion import StableDiffusion
 
 (ENTRY_STATE, CHATGPT_STATE,
 DALL_E_STATE, STABLE_STATE, 
