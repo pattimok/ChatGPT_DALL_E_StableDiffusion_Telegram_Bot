@@ -1,4 +1,3 @@
-import deep_translator
 from deep_translator import GoogleTranslator
   
 import os
